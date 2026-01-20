@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel Comparator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="outer-wrapper">
+        <div class="container">
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+    <div class="file-wrapper">
+        <label>Select File 1:</label>
+        <input type="file" name="file1" accept=".xlsx" required>
+    </div>
+
+    <div class="file-wrapper">
+        <label>Select File 2:</label>
+        <input type="file" name="file2" accept=".xlsx" required>
+    </div>
+
+    <button type="submit">✨ Upload & Compare ✨</button>
+</form>
+
+<!--  
+            {% if matched_file %} -->
+            <div class="download-section">
+                <h2>Download Result</h2>
+                <a href="/download/{{ matched_file }}">⬇️ Download Matched Output</a>
+            </div>
+            <!-- {% endif %} -->
+        </div>
+    </div>
+</body>
+</html>
